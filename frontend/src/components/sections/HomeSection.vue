@@ -76,32 +76,8 @@ const alternateText = async (signal) => {
     await typeWriter(alternatingTextRef.value, data.value.name, TYPE_SPEED, signal)
     return
   }
-
-  while (!signal?.aborted) {
-    await typeWriter(alternatingTextRef.value, data.value.name, TYPE_SPEED, signal)
-    if (signal?.aborted) break
-
-    await new Promise(resolve => {
-      const timeout = setTimeout(resolve, NAME_DISPLAY_TIME)
-      signal?.addEventListener('abort', () => clearTimeout(timeout))
-    })
-    if (signal?.aborted) break
-
-    await eraseText(alternatingTextRef.value, ERASE_SPEED, signal)
-    if (signal?.aborted) break
-
-    await typeWriter(alternatingTextRef.value, data.value.secondaryName, TYPE_SPEED, signal)
-    if (signal?.aborted) break
-
-    await new Promise(resolve => {
-      const timeout = setTimeout(resolve, SECONDARY_NAME_DISPLAY_TIME)
-      signal?.addEventListener('abort', () => clearTimeout(timeout))
-    })
-    if (signal?.aborted) break
-
-    await eraseText(alternatingTextRef.value, ERASE_SPEED, signal)
-  }
 }
+
 
 const startAnimations = async () => {
   animationController = createAnimationController()
@@ -153,7 +129,6 @@ onUnmounted(() => {
           <span ref="alternatingTextRef" class="text-yellow-500 dark:text-yellow-400"></span>
         </h2>
         <p class="text-xl md:text-2xl">{{ data.title }}</p>
-        <p class="text-lg text-gray-600 dark:text-gray-400">{{ data.subtitle }}</p>
         <router-link v-if="contactSection" :to="'/' + contactSection.path"
           class="inline-block px-8 py-3 font-bold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 bg-gradient-to-bl from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 dark:from-primary-500 dark:to-primary-700 dark:hover:from-primary-600 dark:hover:to-primary-800">
           {{ t('sections.home.getInTouch') }}
