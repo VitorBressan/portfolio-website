@@ -12,6 +12,7 @@
       "personName": "Vitor Bressan",
       "secondaryName": "",
       "title": "Backend Python Developer",
+      "subtitle": "Building backend systems and APIs with Python, FastAPI, and SQLAlchemy.",
       "itsMe": "It's me",
       "getInTouch": "Get in Touch"
     },
