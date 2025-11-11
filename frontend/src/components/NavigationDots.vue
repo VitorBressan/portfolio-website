@@ -89,7 +89,7 @@ watch(() => props.activeSection, (newVal, oldVal) => {
 <template>
   <nav id="section-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-50" aria-label="Section navigation">
     <ul class="flex flex-col items-center space-y-4">
-      <li v-for="(section, index) in sections" :key="index" class="relative group">
+      <li v-for="(section, index) in sections.filter(s => s?.component !== 'LicensesCertifications')" :key="index" class="relative group">
         <div class="w-4 h-4 flex items-center justify-center">
           <button @click="navigateToSection(index)" @mouseenter="!isTouchDevice && (hoveredIndex = index)"
             @mouseleave="!isTouchDevice && (hoveredIndex = null)" :class="getDotClasses(index)"

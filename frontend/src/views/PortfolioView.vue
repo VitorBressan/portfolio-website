@@ -212,7 +212,7 @@ onBeforeUnmount(() => {
     <StarryBackground />
 
     <!-- Render each section dynamically -->
-    <div v-for="(section, index) in sections" :key="index"
+    <div v-for="(section, index) in sections.filter(s => s?.component !== 'LicensesCertifications')" 
       class="w-full h-screen flex flex-col snap-start section-container relative" :id="section.path"
       style="flex: 0 0 100vh;">
       <div class="flex-grow overflow-y-auto">
