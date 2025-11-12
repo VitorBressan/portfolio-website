@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { Mail } from 'lucide-vue-next';
 
@@ -25,11 +26,15 @@ const data = {
   ]
 };
 
-const openEmailClient = () => {
-  if (data.email) {
-    window.location.href = `mailto:${data.email}`;
-  }
-};
+const copied = ref(false)
+
+function copyText(event) {
+  const text = event.target.innerText
+  navigator.clipboard.writeText(text)
+
+  copied.value = true
+  setTimeout(() => (copied.value = false), 2000) // esconde após 2s
+}
 </script>
 
 <template>
@@ -43,11 +48,19 @@ const openEmailClient = () => {
       <p class="text-gray-700 dark:text-gray-200 mb-6 transition-colors duration-200">
         {{ t('sections.contact.description') }}
       </p>
-      <button v-if="data.email" @click="openEmailClient"
-        class="bg-primary text-white hover:bg-primary-400 font-semibold py-2 px-4 rounded-md transition-all duration-300 text-sm md:text-base flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl ease-in-out transform hover:-translate-y-1 bg-gradient-to-bl from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 dark:from-primary-500 dark:to-primary-700 dark:hover:from-primary-600 dark:hover:to-primary-800 focus:ring-2 focus:ring-primary-300 dark:focus:ring-primary-600 focus:outline-none">
-        <Mail class="size-5 mr-2" />
-        {{ t('sections.contact.emailButton') }}
-      </button>
+      <div class="relative inline-block">
+        <p  @click="copyText" class="text-xl text-green-700 dark:text-green-300 mb-6 transition-colors duration-200">
+          contato.vbressan@gmail.com 
+        </p>
+        <transition name="fade">
+          <div
+            v-if="copied"
+            class="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-green-600 text-white text-sm px-3 py-1 rounded-lg shadow-md"
+          >
+            ✅ Copied! 
+          </div>
+        </transition>
+      </div>
       <div class="flex justify-center space-x-4">
         <a v-for="link in data.socialLinks" :key="link.name" :href="link.url" target="_blank" rel="noopener noreferrer"
           class="text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-300 dark:focus:ring-primary-600 rounded-full">
@@ -60,3 +73,14 @@ const openEmailClient = () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
