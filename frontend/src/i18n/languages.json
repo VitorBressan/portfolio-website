@@ -4,9 +4,9 @@
     "iso": "en-US",
     "name": "English"
   },
-  {
-    "code": "fr",
-    "iso": "fr-FR",
-    "name": "Français"
-  }
+{
+    "code": "pt",
+    "iso": "pt-BR",
+    "name": "Português"
+}
 ]

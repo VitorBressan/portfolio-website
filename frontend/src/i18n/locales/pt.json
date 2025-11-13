@@ -1,0 +1,158 @@
+{
+  "aria": {
+    "selectTheme": "Selecionar o tema {theme}",
+    "selectColor": "Selecionar a cor de destaque {color}",
+    "navigateToSection": "Navegar para {section}"
+  },
+  "sections": {
+    "home": {
+      "name": "Início",
+      "pageTitle": "Vitor Bressan {'|'} Desenvolvedor Python Backend",
+      "greeting": "Olá!",
+      "personName": "Vitor Bressan",
+      "secondaryName": "",
+      "title": "Desenvolvedor Python Backendb",
+      "subtitle": "Construindo sistemas backend e APIs com Python, FastAPI e SQLAlchemy.",
+      "itsMe": "Sou eu",
+      "getInTouch": "Entrar em Contato"
+    },
+    "about": {
+      "name": "Sobre",
+      "pageTitle": "Sobre mim {'|'} John Doe",
+      "heading": "Sobre mim",
+      "description": "Olá! Sou Vitor Bressan, um desenvolvedor autodidata focado em Desenvolvimento Backend com Python. Gosto de construir a lógica por trás das aplicações, conectar sistemas e criar soluções de backend confiáveis. Tenho estudado programação de forma consistente, desenvolvido projetos pessoais e também possuo experiência profissional como estagiário, resolvendo problemas reais em ambiente de produção. Meu objetivo é conseguir uma vaga como desenvolvedor backend, aprimorar minhas habilidades e contribuir para projetos de impacto."
+    },
+    "licensesAndCerts": {
+      "name": "Licenças e Certificações",
+      "pageTitle": "Licenças e Certificações {'|'} Vitor Bressan",
+      "heading": "Licenças e Certificações",
+      "additionalHeading": "Certificações Adicionais",
+      "verifyButton": "Verificar Certificação",
+      "featured": {
+        "aws_cfl": {
+          "title": "AWS Cloud Practitioner",
+          "alt": "Badge da Certificação AWS Cloud Practitioner",
+          "details": "Valida o entendimento geral sobre a Nuvem AWS"
+        },
+        "aws_da": {
+          "title": "AWS Certified Developer - Associate",
+          "alt": "Badge da Certificação AWS Developer Associate",
+          "details": "Desenvolver, projetar e gerenciar soluções robustas, seguras, escaláveis e altamente disponíveis para atingir objetivos de negócio"
+        },
+        "radio": {
+          "title": "Licença de Estação de Rádio Amador",
+          "alt": "Badge da Licença de Rádio Amador",
+          "details": "Operador de rádio amador licenciado com experiência em comunicações sem fio"
+        }
+      },
+      "other": {
+        "react": {
+          "title": "Desenvolvedor React",
+          "alt": "Certificação Desenvolvedor React"
+        },
+        "vue": {
+          "title": "Desenvolvedor Vue.js",
+          "alt": "Certificação Desenvolvedor Vue.js"
+        },
+        "typescript": {
+          "title": "TypeScript",
+          "alt": "Certificação TypeScript"
+        },
+        "nodejs": {
+          "title": "Node.js",
+          "alt": "Certificação Desenvolvedor Node.js"
+        },
+        "mongodb": {
+          "title": "MongoDB",
+          "alt": "Certificação MongoDB"
+        },
+        "docker": {
+          "title": "Docker",
+          "alt": "Certificação Docker"
+        }
+      }
+    },
+    "projects": {
+      "name": "Projetos",
+      "pageTitle": "Projetos {'|'} John Doe",
+      "heading": "Meus Projetos",
+      "viewButton": "Ver Projeto",
+      "items": {
+        "project1": {
+          "title": "Projeto 1",
+          "description": "Uma aplicação web Vue.js para gerenciamento de tarefas."
+        },
+        "project2": {
+          "title": "Projeto 2",
+          "description": "Uma plataforma de e-commerce construída com Vue e Node.js."
+        },
+        "project3": {
+          "title": "Projeto 3",
+          "description": "Um site de portfólio responsivo utilizando Vue e Tailwind CSS."
+        },
+        "project4": {
+          "title": "Projeto 4",
+          "description": "Um aplicativo de chat em tempo real com Vue e Firebase."
+        },
+        "project5": {
+          "title": "Projeto 5",
+          "description": "Outro aplicativo de chat em tempo real com Vue e Firebase."
+        }
+      }
+    },
+    "contact": {
+      "name": "Contato",
+      "pageTitle": "Entrar em Contato {'|'} John Doe",
+      "heading": "Entrar em Contato",
+      "description": "Sinta-se à vontade para me enviar um email ou me encontrar nas redes sociais!",
+      "emailButton": "Enviar Email",
+      "socialNames": {
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "instagram": "Instagram"
+      }
+    }
+  },
+  "settings": {
+    "theme": {
+      "label": "Tema",
+      "light": "Claro",
+      "dark": "Escuro",
+      "system": "Sistema ({theme})"
+    },
+    "accentColor": {
+      "label": "Cor de destaque",
+      "emerald": "Esmeralda",
+      "green": "Verde",
+      "lime": "Limão",
+      "red": "Vermelho",
+      "orange": "Laranja",
+      "amber": "Âmbar",
+      "yellow": "Amarelo",
+      "teal": "Azul-petróleo",
+      "cyan": "Ciano",
+      "sky": "Céu",
+      "blue": "Azul",
+      "indigo": "Índigo",
+      "violet": "Violeta",
+      "purple": "Roxo",
+      "fuchsia": "Fúcsia",
+      "pink": "Rosa",
+      "rose": "Rosa vibrante",
+      "slate": "Ardósia",
+      "gray": "Cinza",
+      "zinc": "Zinco",
+      "neutral": "Neutro",
+      "stone": "Pedra"
+    },
+    "showScrollbar": {
+      "label": "Mostrar barra de rolagem"
+    },
+    "language": {
+      "label": "Idioma"
+    },
+    "customize": {
+      "label": "Personalizar sua experiência"
+    }
+  }
+}
